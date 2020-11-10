@@ -9,3 +9,11 @@
   border-right: 1px solid #ccc;
   padding-top: 10px;
 }
+.today {
+  background-color: #1a73e8;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  line-height: 24px;
+  width: 24px;
+}

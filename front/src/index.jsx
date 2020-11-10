@@ -5,7 +5,7 @@ import dayjs from "dayjs";
 import "dayjs/locale/ja";
 dayjs.locale("ja");
 
-//カレンダーのUIをカレンダーに近づける（完了）
+//日付と月を判別するロジックをリファクタリング（完了）
 //feature1
 
 const App = () => (

@@ -14,3 +14,14 @@ export const createCalendar = () =>{
     return day;
   });
 };
+
+//CalendarElement内の日付ロジックを分離して生成（リファクタリング）
+export const isSameDay = (d1,d2) =>{
+  const format = "YYYYMMDD";
+  return d1.format(format) === d2.format(format)
+};
+export const isSameMonth = (m1,m2) =>{
+  const format = "YYYYMM";
+  return m1.format(format) === m2.format(format)
+};
+export const isFirstDay = day => day.date() === 1;//trueかfalseを返す
