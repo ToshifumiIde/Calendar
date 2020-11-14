@@ -8,7 +8,8 @@ const mapStateToProps = state => ({
 //storeから必要な状態（state）を選択してpropsの形にする関数。
 //実行時にstateが渡されるため、それをコンポーネントで使う名前で渡している。
 
-const mergeProps = stateProps => ({
+const mergeProps = (stateProps , dispatchProps) => ({
+  month:stateProps.calendar,
   calendar:createCalendar(stateProps.calendar)
 });
 

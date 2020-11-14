@@ -12,7 +12,8 @@ import Navigation from "./components/Navigation/container";
 
 const store = createStore(rootReducer);//createStore関数の引数にrootReducerを渡すことで、storeを生成する。これでstoreを使える。
 
-// reduxの作成と、reduxをreactに接続する
+// カレンダーの前月、翌月へ遷移するクリックイベントを作成
+//前月・翌月の日付をグレーダウンするロジックを作成し、反映させる
 //feature1
 
 const App = () => (
