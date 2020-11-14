@@ -4,38 +4,42 @@ import {
   GridList,
   Typography,
 }from "@material-ui/core";//GridListはカレンダーのレイアウトを作成、TypoGraphyはデザインを担当
-import * as styles from "./style.css";
+import * as styles from "./style.css";//cssのインポート
 import CalendarElement from "../CalendarElement";//個々の日付を描画するコンポーネントの取得
-// import { createCalendar } from "../../services/calendar";//カレンダーの日付の配列を生成するコンポーネント
 
-// const calendar = createCalendar();//関数の実行結果(配列)を格納する
 const days = ["日","月","火","水","木","金","土"];
 
-const CalendarBoard = ({ calendar , month }) => {
-  // console.log(calendar);
+const CalendarBoard = ({ calendar , month , openAddScheduleDialog }) => {
   return (
     <div className={styles.container}>
       <GridList 
+        cellHeight="auto"
         className={styles.grid}
         cols={7}
         spacing={0}
-        cellHeight="auto">
+        >
           {days.map( d => (
             <li key={d}>
               <Typography
+                align="center"
                 className={styles.days}
                 color="textSecondary"
-                align="center"
-                variant="caption"
                 component="div"
+                variant="caption"
               >
               {d}
               </Typography>
             </li>
           ))}
-          {calendar.map(c => (
-            <li key={c.toISOString()}>
-              <CalendarElement day={c} month={month}/>
+          {calendar.map( c => (
+            <li 
+              key={c.toISOString()}
+              onClick={()=> openAddScheduleDialog()}
+            >
+              <CalendarElement 
+                day={c}
+                month={month}
+              />
             </li>
           ))}
       </GridList>

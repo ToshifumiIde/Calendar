@@ -1,3 +1,4 @@
+//カレンダーの日付の見た目を生成する
 import React from "react";
 import * as styles from "./style.css";
 import { Typography } from "@material-ui/core";//Typography(design)のインストール

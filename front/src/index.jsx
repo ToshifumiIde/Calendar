@@ -11,12 +11,13 @@ import Navigation from "./components/Navigation/container";
 // import CalendarBoard from "./components/CalendarBoard/container";
 import DayjsUtils from "@date-io/dayjs";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
+import AddScheduleDialog from "./components/AddSchedluleDialog/container";
 
 dayjs.locale("ja");
 
 const store = createStore(rootReducer);//createStore関数の引数にrootReducerを渡すことで、storeを生成する。これでstoreを使える。
 
-//DatePickerと切替の実装
+//Dialogの表示・非表示の実装
 //feature1
 
 const App = () => (
@@ -24,6 +25,7 @@ const App = () => (
     <MuiPickersUtilsProvider utils={DayjsUtils}>
       <Navigation />
       <CalendarBoard />
+      <AddScheduleDialog />
     </MuiPickersUtilsProvider>
   </Provider>
   );
