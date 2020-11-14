@@ -7,6 +7,7 @@ import { Provider } from "react-redux";//storeの情報を全てのコンポー�
 import { createStore } from "redux";//Storeの生成
 import CalendarBoard from "./components/CalendarBoard/container";//カレンダー全体の描画
 import rootReducer from "./redux/rootReducer";//全てのreducerをまとめたrootReducerを入手、storeに格納するために引数として使用
+import Navigation from "./components/Navigation/container";
 // import CalendarBoard from "./components/CalendarBoard/container";
 
 const store = createStore(rootReducer);//createStore関数の引数にrootReducerを渡すことで、storeを生成する。これでstoreを使える。
@@ -16,6 +17,7 @@ const store = createStore(rootReducer);//createStore関数の引数にrootReduce
 
 const App = () => (
 <Provider store={store}>
+  <Navigation />
   <CalendarBoard />
   </Provider>
 );
