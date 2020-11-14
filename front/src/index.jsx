@@ -9,18 +9,24 @@ import CalendarBoard from "./components/CalendarBoard/container";//カレンダ�
 import rootReducer from "./redux/rootReducer";//全てのreducerをまとめたrootReducerを入手、storeに格納するために引数として使用
 import Navigation from "./components/Navigation/container";
 // import CalendarBoard from "./components/CalendarBoard/container";
+import DayjsUtils from "@date-io/dayjs";
+import { MuiPickersUtilsProvider } from "@material-ui/pickers";
+
+dayjs.locale("ja");
 
 const store = createStore(rootReducer);//createStore関数の引数にrootReducerを渡すことで、storeを生成する。これでstoreを使える。
 
-// カレンダーの前月、翌月へ遷移するクリックイベントを作成
-//前月・翌月の日付をグレーダウンするロジックを作成し、反映させる
+//DatePickerと切替の実装
 //feature1
 
 const App = () => (
-<Provider store={store}>
-  <Navigation />
-  <CalendarBoard />
+  <Provider store={store}>
+    <MuiPickersUtilsProvider utils={DayjsUtils}>
+      <Navigation />
+      <CalendarBoard />
+    </MuiPickersUtilsProvider>
   </Provider>
-);
+  );
+
 
 ReactDOM.render(<App />, document.getElementById("root"));
