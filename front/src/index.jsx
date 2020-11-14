@@ -12,7 +12,7 @@ import rootReducer from "./redux/rootReducer";//全てのreducerをまとめたr
 const store = createStore(rootReducer);//createStore関数の引数にrootReducerを渡すことで、storeを生成する。これでstoreを使える。
 
 // reduxの作成と、reduxをreactに接続する
-//feature1
+//feature2
 
 const App = () => (
 <Provider store={store}>
