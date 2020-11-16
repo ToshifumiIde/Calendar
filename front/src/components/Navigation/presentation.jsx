@@ -1,5 +1,5 @@
 //カレンダーのheader部分にくるNavigationの見た目を生成する
-import React,{ useState } from "react";
+import React from "react";
 import {DatePicker} from "@material-ui/pickers";
 import { IconButton , Toolbar , Typography , withStyles } from "@material-ui/core";
 import ArrowBackIos from "@material-ui/icons/ArrowBackIos";

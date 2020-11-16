@@ -15,9 +15,10 @@ import AddScheduleDialog from "./components/AddSchedluleDialog/container";
 
 dayjs.locale("ja");
 
-const store = createStore(rootReducer);//createStore関数の引数にrootReducerを渡すことで、storeを生成する。これでstoreを使える。
+//createStore関数の引数にrootReducerを渡すことで、storeを生成する。これでstoreを使える。
+const store = createStore(rootReducer);
 
-//Dialog内の入力フォームの作成
+//Dialogの日付部分に対してDatePickerを導入
 //feature1
 
 const App = () => (
