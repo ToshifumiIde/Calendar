@@ -18,7 +18,7 @@ dayjs.locale("ja");
 //createStore関数の引数にrootReducerを渡すことで、storeを生成する。これでstoreを使える。
 const store = createStore(rootReducer);
 
-//Dialogの日付部分に対してDatePickerを導入
+//①Dialogに対する閉じるボタンの実装②日付選択をした際に、Dialogの日付が選択した日付で入力される
 //feature1
 
 const App = () => (

@@ -2,11 +2,15 @@
 import { connect } from "react-redux";
 import CalendarBoard from "./presentation";//カレンダーを描画するコンポーネントのimport
 import { createCalendar } from "../../services/calendar";//カレンダーを生成するロジックを格納している
-import { addScheduleOpenDialog } from "../../redux/addSchedule/actions";//カレンダーのスケジュールに対するactionを引っ張ってきている
+import { 
+  addScheduleOpenDialog,
+  addScheduleSetValue,
+} from "../../redux/addSchedule/actions";//カレンダーのスケジュールに対するactionを引っ張ってきている
 
 const mapDispatchToProps = dispatch => ({
-  openAddScheduleDialog:()=> {
+  openAddScheduleDialog: d => {
     dispatch(addScheduleOpenDialog());
+    dispatch(addScheduleSetValue({date:d}));
   },
 });
 
