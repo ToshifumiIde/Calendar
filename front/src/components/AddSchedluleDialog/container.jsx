@@ -1,13 +1,19 @@
-//
+//スケジュール追加の状態管理を実装するcontainer
 import { connect } from "react-redux";
 import AddScheduleDialog from "./presentation";
-import { addScheduleCloseDialog } from "../../redux/addSchedule/actions";
+import { 
+  addScheduleCloseDialog,
+  addScheduleSetValue,
+} from "../../redux/addSchedule/actions";
 
 const mapStateToProps = state => ({ schedule:state.addSchedule });
 
 const mapDispatchToProps = dispatch => ({
   closeDialog:() => {
     dispatch(addScheduleCloseDialog());
+  },
+  setSchedule:value => {
+    dispatch(addScheduleSetValue(value));
   }
 });
 

@@ -17,7 +17,7 @@ dayjs.locale("ja");
 
 const store = createStore(rootReducer);//createStore関数の引数にrootReducerを渡すことで、storeを生成する。これでstoreを使える。
 
-//Dialogの表示・非表示の実装
+//Dialog内の入力フォームの作成
 //feature1
 
 const App = () => (
