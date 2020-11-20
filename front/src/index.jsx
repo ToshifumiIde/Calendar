@@ -18,7 +18,7 @@ dayjs.locale("ja");
 //createStore関数の引数にrootReducerを渡すことで、storeを生成する。これでstoreを使える。
 const store = createStore(rootReducer);
 
-//①Dialogに対する閉じるボタンの実装②日付選択をした際に、Dialogの日付が選択した日付で入力される
+//Dialogの予定を管理するreducerを実装
 //feature1
 
 const App = () => (
