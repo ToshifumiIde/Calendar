@@ -18,7 +18,7 @@ dayjs.locale("ja");
 //createStore関数の引数にrootReducerを渡すことで、storeを生成する。これでstoreを使える。
 const store = createStore(rootReducer);
 
-//Dialogの予定を管理するreducerを実装
+//予定保存の確認をconsoleにて実施
 //feature1
 
 const App = () => (

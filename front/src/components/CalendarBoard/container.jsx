@@ -15,7 +15,8 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => ({
-  calendar:state.calendar
+  calendar:state.calendar,
+  schedules:state.schedules,
 });
 //storeから必要な状態（state）を選択してpropsの形にする関数。
 //実行時にstateが渡されるため、それをコンポーネントで使う名前で渡している。

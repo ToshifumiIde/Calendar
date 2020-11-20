@@ -6,7 +6,7 @@ const init ={
   isLoading:false,
 }
 
-const scheduleReducer = (state = init , action) =>{
+const schedulesReducer = (state = init , action) =>{
   const {type , payload} = action;
   switch(type){
     case SCHEDULES_ADD_ITEM:
@@ -19,4 +19,4 @@ const scheduleReducer = (state = init , action) =>{
   }
 };
 
-export default scheduleReducer;
+export default schedulesReducer;

@@ -9,7 +9,13 @@ import CalendarElement from "../CalendarElement";//個々の日付を描画す�
 
 const days = ["日","月","火","水","木","金","土"];
 
-const CalendarBoard = ({ calendar , month , openAddScheduleDialog }) => {
+const CalendarBoard = ({
+  calendar,
+  month,
+  openAddScheduleDialog,
+  schedules,
+}) => {
+  console.log(schedules);
   return (
     <div className={styles.container}>
       <GridList 

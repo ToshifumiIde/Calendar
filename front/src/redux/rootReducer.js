@@ -4,12 +4,12 @@
 import { combineReducers } from "redux";
 import calendarReducer from "./calendar/reducer";//カレンダーのreducerをインポート
 import addScheduleReducer from "./addSchedule/reducer";//スケジュールのreducerをインポート
-import scheduleReducer from "./schedules/reducer";//DIalogのreducerをインポート
+import schedulesReducer from "./schedules/reducer";//DIalogのreducerをインポート
 
 const rootReducer = combineReducers({
   calendar:calendarReducer,
   addSchedule:addScheduleReducer,
-  schedules:scheduleReducer,
+  schedules:schedulesReducer,
 });
 
 export default rootReducer;
