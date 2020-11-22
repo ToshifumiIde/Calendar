@@ -1,5 +1,5 @@
 //カレンダーの日付の見た目を生成する
-import React from "react";
+import React from "react";//reactパッケージのインストール
 import * as styles from "./style.css";
 import { Typography } from "@material-ui/core";//Typography(design)のインストール
 import dayjs from "dayjs";
@@ -9,8 +9,9 @@ import {
   isFirstDay,
   getMonth,
 } from "../../services/calendar";//リファクタリングを実施
+import Schedule from "../Schedule";
 
-const CalendarElement = ( { day , month } )=> {
+const CalendarElement = ( { day , month , schedules } )=> {
   const today = dayjs();
   //今月以外をグレーダウン
   // ①const isCurrentMonth = day.month() === today.month();リファクタリングして、下記内容に変更
@@ -41,6 +42,11 @@ const CalendarElement = ( { day , month } )=> {
           {day.format(format)}
         </span>
       </Typography>
+      <div className={styles.schedules}>
+        {schedules.map(e => (
+          <Schedule key={e.id} schedule={e} />
+        ))}
+      </div>
     </div>
   );
 };
