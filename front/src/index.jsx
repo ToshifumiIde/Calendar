@@ -15,6 +15,8 @@ import AddScheduleDialog from "./components/AddScheduleDialog/container";
 
 dayjs.locale("ja");
 
+import CurrentScheduleDialog from "./components/CurrentScheduleDialog/container";
+
 //createStore関数の引数にrootReducerを渡すことで、storeを生成する。これでstoreを使える。
 const store = createStore(rootReducer);
 
@@ -27,6 +29,7 @@ const App = () => (
       <Navigation />
       <CalendarBoard />
       <AddScheduleDialog />
+      <CurrentScheduleDialog />
     </MuiPickersUtilsProvider>
   </Provider>
   );

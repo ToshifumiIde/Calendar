@@ -11,7 +11,12 @@ import {
 } from "../../services/calendar";//リファクタリングを実施
 import Schedule from "../Schedule";
 
-const CalendarElement = ( { day , month , schedules } )=> {
+const CalendarElement = ({ 
+  day,
+  month,
+  schedules,
+  ...props
+  })=> {
   const today = dayjs();
   //今月以外をグレーダウン
   // ①const isCurrentMonth = day.month() === today.month();リファクタリングして、下記内容に変更
@@ -44,7 +49,11 @@ const CalendarElement = ( { day , month , schedules } )=> {
       </Typography>
       <div className={styles.schedules}>
         {schedules.map(e => (
-          <Schedule key={e.id} schedule={e} />
+          <Schedule 
+            key={e.id}
+            schedule={e}
+            {...props}
+          />
         ))}
       </div>
     </div>

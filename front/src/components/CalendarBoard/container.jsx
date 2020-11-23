@@ -7,12 +7,21 @@ import {
   addScheduleOpenDialog,
   addScheduleSetValue,
 } from "../../redux/addSchedule/actions";//カレンダーのスケジュールに対するactionを引っ張ってきている
+import {
+  currentScheduleSetItem,
+  currentScheduleOpenDialog,
+} from "../../redux/currentSchedule/actions";
 
 const mapDispatchToProps = dispatch => ({
   openAddScheduleDialog: d => {
     dispatch(addScheduleOpenDialog());
     dispatch(addScheduleSetValue({date:d}));
   },
+  openCurrentScheduleDialog:(schedule,e) =>{
+    e.stopPropagation();
+    dispatch(currentScheduleSetItem(schedule));
+    dispatch(currentScheduleOpenDialog());
+  }
 });
 
 const mapStateToProps = state => ({

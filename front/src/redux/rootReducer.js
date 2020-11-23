@@ -5,10 +5,12 @@ import { combineReducers } from "redux";
 import calendarReducer from "./calendar/reducer";//カレンダーのreducerをインポート
 import addScheduleReducer from "./addSchedule/reducer";//スケジュールのreducerをインポート
 import schedulesReducer from "./schedules/reducer";//DIalogのreducerをインポート
+import currentScheduleReducer from "./currentSchedule/reducer";
 
 const rootReducer = combineReducers({
   calendar:calendarReducer,
   addSchedule:addScheduleReducer,
+  currentSchedule:currentScheduleReducer,
   schedules:schedulesReducer,
 });
 
