@@ -20,7 +20,7 @@ import CurrentScheduleDialog from "./components/CurrentScheduleDialog/container"
 //createStore関数の引数にrootReducerを渡すことで、storeを生成する。これでstoreを使える。
 const store = createStore(rootReducer);
 
-//予定保存の確認をconsoleにて実施（完了）
+//サーバーからの予定取得（途中）
 //feature1
 
 const App = () => (
